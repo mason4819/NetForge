@@ -1,0 +1,40 @@
+<Page x:Class="NetForge.Views.AdaptersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:m="using:NetForge.Models">
+  <ScrollViewer>
+    <StackPanel Padding="32,28" Spacing="16" MaxWidth="940" HorizontalAlignment="Left">
+      <TextBlock x:Name="TitleText" Style="{StaticResource TitleTextBlockStyle}"/>
+      <StackPanel Orientation="Horizontal" Spacing="10">
+        <Button x:Uid="Refresh" Click="Refresh_Click"/>
+        <ProgressRing IsActive="{x:Bind Vm.IsBusy, Mode=OneWay}" Width="22" Height="22"/>
+      </StackPanel>
+      <StackPanel Visibility="{x:Bind Vm.IsEmpty, Mode=OneWay}" Spacing="4">
+        <TextBlock x:Uid="Empty_T" Style="{StaticResource SubtitleTextBlockStyle}"/>
+        <TextBlock x:Uid="Empty_S" Style="{StaticResource Muted}"/>
+      </StackPanel>
+      <ItemsControl ItemsSource="{x:Bind Vm.Items}">
+        <ItemsControl.ItemTemplate>
+          <DataTemplate x:DataType="m:AdapterInfo">
+            <StackPanel Spacing="8" Padding="0,10,0,14" BorderBrush="{ThemeResource NfStrokeBrush}" BorderThickness="0,0,0,1">
+              <StackPanel Orientation="Horizontal" Spacing="10">
+                <TextBlock Text="{x:Bind Name}" Style="{StaticResource BodyStrongTextBlockStyle}"/>
+                <TextBlock Text="{x:Bind KindText}" Style="{StaticResource Muted}"/>
+                <TextBlock Text="{x:Bind StatusText}" Style="{StaticResource Muted}"/>
+              </StackPanel>
+              <ItemsRepeater ItemsSource="{x:Bind Rows}">
+                <ItemsRepeater.Layout><UniformGridLayout MinItemWidth="260" MinRowSpacing="8" MinColumnSpacing="16"/></ItemsRepeater.Layout>
+                <DataTemplate x:DataType="m:KeyValue">
+                  <StackPanel>
+                    <TextBlock Text="{x:Bind Label}" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                    <TextBlock Text="{x:Bind Value}" IsTextSelectionEnabled="True" TextWrapping="Wrap"/>
+                  </StackPanel>
+                </DataTemplate>
+              </ItemsRepeater>
+            </StackPanel>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+    </StackPanel>
+  </ScrollViewer>
+</Page>

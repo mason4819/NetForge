@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_overview.Content" xml:space="preserve"><value>概要</value></data>
+  <data name="Nav_common.Content" xml:space="preserve"><value>よく使う</value></data>
+  <data name="Nav_dns.Content" xml:space="preserve"><value>DNS</value></data>
+  <data name="Nav_ping.Content" xml:space="preserve"><value>Ping</value></data>
+  <data name="Nav_traceroute.Content" xml:space="preserve"><value>トレースルート</value></data>
+  <data name="Nav_networktest.Content" xml:space="preserve"><value>ネットワークテスト</value></data>
+  <data name="Nav_speedtest.Content" xml:space="preserve"><value>速度テスト</value></data>
+  <data name="Nav_wifi.Content" xml:space="preserve"><value>Wi-Fi</value></data>
+  <data name="Nav_ethernet.Content" xml:space="preserve"><value>イーサネット</value></data>
+  <data name="Nav_adapters.Content" xml:space="preserve"><value>アダプター</value></data>
+  <data name="Nav_advanced.Content" xml:space="preserve"><value>詳細設定</value></data>
+  <data name="Nav_ipv4.Content" xml:space="preserve"><value>IPv4</value></data>
+  <data name="Nav_ipv6.Content" xml:space="preserve"><value>IPv6</value></data>
+  <data name="Nav_tcpip.Content" xml:space="preserve"><value>TCP/IP</value></data>
+  <data name="Nav_dhcp.Content" xml:space="preserve"><value>DHCP</value></data>
+  <data name="Nav_routing.Content" xml:space="preserve"><value>ルーティング</value></data>
+  <data name="Nav_arp.Content" xml:space="preserve"><value>ARP</value></data>
+  <data name="Nav_mtu.Content" xml:space="preserve"><value>MTU</value></data>
+  <data name="Nav_proxy.Content" xml:space="preserve"><value>プロキシ</value></data>
+  <data name="Nav_hosts.Content" xml:space="preserve"><value>Hosts</value></data>
+  <data name="Nav_firewall.Content" xml:space="preserve"><value>ファイアウォール</value></data>
+  <data name="Nav_winsock.Content" xml:space="preserve"><value>Winsock</value></data>
+  <data name="Nav_netbios.Content" xml:space="preserve"><value>NetBIOS</value></data>
+  <data name="Nav_qos.Content" xml:space="preserve"><value>QoS</value></data>
+  <data name="Nav_reset.Content" xml:space="preserve"><value>ネットワークのリセット</value></data>
+  <data name="Nav_diagnostics.Content" xml:space="preserve"><value>診断</value></data>
+  <data name="Nav_about.Content" xml:space="preserve"><value>このアプリについて</value></data>
+  <data name="Refresh.Content" xml:space="preserve"><value>更新</value></data>
+  <data name="Start.Content" xml:space="preserve"><value>開始</value></data>
+  <data name="Stop.Content" xml:space="preserve"><value>停止</value></data>
+  <data name="Empty_T.Text" xml:space="preserve"><value>まだデータがありません</value></data>
+  <data name="Empty_S.Text" xml:space="preserve"><value>今は表示できるものがありません。</value></data>
+  <data name="Overview_Title.Text" xml:space="preserve"><value>ネットワークの状態</value></data>
+  <data name="Overview_Run.Content" xml:space="preserve"><value>ネットワーク診断を実行</value></data>
+  <data name="Overview_Refresh.Content" xml:space="preserve"><value>更新</value></data>
+  <data name="Overview_Quick.Text" xml:space="preserve"><value>クイック操作</value></data>
+  <data name="Overview_NoSpeed" xml:space="preserve"><value>速度テスト未実行</value></data>
+  <data name="Msg_Connected_T" xml:space="preserve"><value>接続済み</value></data>
+  <data name="Msg_Connected_S" xml:space="preserve"><value>ネットワークは元気に動いています。</value></data>
+  <data name="Msg_Limited_T" xml:space="preserve"><value>制限あり</value></data>
+  <data name="Msg_Limited_S" xml:space="preserve"><value>ルーターには接続できますが、インターネットが応答しません。</value></data>
+  <data name="Msg_Disconnected_T" xml:space="preserve"><value>接続なし</value></data>
+  <data name="Msg_Disconnected_S" xml:space="preserve"><value>ネットワークがいなくなったようです。まず簡単なところから確認しましょう。</value></data>
+  <data name="Msg_UacDenied" xml:space="preserve"><value>管理者の承認が得られなかったため、何も変更していません。</value></data>
+  <data name="State_Passed" xml:space="preserve"><value>合格</value></data>
+  <data name="State_Warning" xml:space="preserve"><value>注意</value></data>
+  <data name="State_Failed" xml:space="preserve"><value>失敗</value></data>
+  <data name="Status_Up" xml:space="preserve"><value>接続済み</value></data>
+  <data name="Status_Down" xml:space="preserve"><value>未接続</value></data>
+  <data name="Dns_Hint.Text" xml:space="preserve"><value>どれを選べばいいか迷う?テストではないので気軽にどうぞ。</value></data>
+  <data name="Dns_Help.Content" xml:space="preserve"><value>選んでもらう</value></data>
+  <data name="Dns_Category.Header" xml:space="preserve"><value>カテゴリ</value></data>
+  <data name="Dns_Scope.Header" xml:space="preserve"><value>適用先</value></data>
+  <data name="Dns_Family.Header" xml:space="preserve"><value>IP の種類</value></data>
+  <data name="Dns_Apply.Content" xml:space="preserve"><value>適用</value></data>
+  <data name="Dns_Backup.Content" xml:space="preserve"><value>現在の DNS をバックアップ</value></data>
+  <data name="Dns_Restore.Content" xml:space="preserve"><value>以前の DNS に戻す</value></data>
+  <data name="Dns_Relaunch.Content" xml:space="preserve"><value>管理者として再起動</value></data>
+  <data name="Ping_Target.Header" xml:space="preserve"><value>ターゲット</value></data>
+  <data name="Test_Run.Content" xml:space="preserve"><value>テスト開始</value></data>
+  <data name="Wifi_None_T.Text" xml:space="preserve"><value>Wi-Fi に接続されていません</value></data>
+  <data name="Settings_Theme.Header" xml:space="preserve"><value>テーマ</value></data>
+  <data name="Settings_Language.Header" xml:space="preserve"><value>言語</value></data>
+  <data name="Settings_Restart.Text" xml:space="preserve"><value>言語を反映するには NetForge を再起動してください。</value></data>
+  <data name="Settings_Perf.Header" xml:space="preserve"><value>パフォーマンス</value></data>
+  <data name="Settings_Balanced.Content" xml:space="preserve"><value>バランス</value></data>
+  <data name="Settings_Low.Content" xml:space="preserve"><value>低リソース</value></data>
+  <data name="About_Tagline.Text" xml:space="preserve"><value>ネットワークに詳しいけれど、余計なことは言いません。</value></data>
+</root>

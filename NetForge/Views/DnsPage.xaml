@@ -1,0 +1,49 @@
+<Page x:Class="NetForge.Views.DnsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:m="using:NetForge.Models">
+  <ScrollViewer>
+    <StackPanel Padding="32,28" Spacing="14" MaxWidth="940" HorizontalAlignment="Left">
+      <TextBlock x:Uid="Dns_Title" Style="{StaticResource TitleTextBlockStyle}"/>
+      <StackPanel Orientation="Horizontal" Spacing="12">
+        <ComboBox x:Uid="Dns_Category" Width="220" ItemsSource="{x:Bind Vm.Categories}" SelectedIndex="{x:Bind Vm.CategoryIndex, Mode=TwoWay}"/>
+        <Button x:Uid="Dns_Help" VerticalAlignment="Bottom" Click="Help_Click"/>
+      </StackPanel>
+      <TextBlock x:Uid="Dns_Hint" Style="{StaticResource Muted}"/>
+      <InfoBar IsOpen="{x:Bind Vm.HasReason, Mode=OneWay}" IsClosable="False" Severity="Informational" Message="{x:Bind Vm.Reason, Mode=OneWay}"/>
+      <ListView ItemsSource="{x:Bind Vm.Filtered}" SelectedItem="{x:Bind Vm.Selected, Mode=TwoWay}" MaxHeight="300"
+                Visibility="{x:Bind Vm.IsNotCustom, Mode=OneWay}" x:Name="ProviderList" SelectionMode="Single">
+        <ListView.ItemTemplate>
+          <DataTemplate x:DataType="m:DnsProvider">
+            <StackPanel Padding="0,6" Spacing="2">
+              <TextBlock Text="{x:Bind Name}" Style="{StaticResource BodyStrongTextBlockStyle}"/>
+              <TextBlock Text="{x:Bind V4Line}" Style="{StaticResource Muted}" FontFamily="Consolas" FontSize="12"/>
+            </StackPanel>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <TextBlock Text="{x:Bind Vm.Details, Mode=OneWay}" Style="{StaticResource Muted}" IsTextSelectionEnabled="True"/>
+      <Grid Visibility="{x:Bind Vm.IsCustom, Mode=OneWay}" ColumnDefinitions="*,*" ColumnSpacing="12" RowDefinitions="Auto,Auto" RowSpacing="10">
+        <TextBox x:Uid="Dns_P4" Text="{x:Bind Vm.CustomP4, Mode=TwoWay}"/>
+        <TextBox x:Uid="Dns_S4" Grid.Column="1" Text="{x:Bind Vm.CustomS4, Mode=TwoWay}"/>
+        <TextBox x:Uid="Dns_P6" Grid.Row="1" Text="{x:Bind Vm.CustomP6, Mode=TwoWay}"/>
+        <TextBox x:Uid="Dns_S6" Grid.Row="1" Grid.Column="1" Text="{x:Bind Vm.CustomS6, Mode=TwoWay}"/>
+      </Grid>
+      <StackPanel Orientation="Horizontal" Spacing="12">
+        <ComboBox x:Uid="Dns_Scope" Width="200" ItemsSource="{x:Bind Vm.Scopes}" SelectedIndex="{x:Bind Vm.ScopeIndex, Mode=TwoWay}"/>
+        <ComboBox x:Uid="Dns_Family" Width="160" ItemsSource="{x:Bind Vm.Families}" SelectedIndex="{x:Bind Vm.FamilyIndex, Mode=TwoWay}"/>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal" Spacing="10">
+        <Button x:Uid="Dns_Apply" Style="{StaticResource AccentButtonStyle}" Click="Apply_Click" IsEnabled="{x:Bind Vm.IsIdle, Mode=OneWay}"/>
+        <Button x:Uid="Dns_Backup" Click="Backup_Click"/>
+        <Button x:Uid="Dns_Restore" Click="Restore_Click"/>
+        <ProgressRing IsActive="{x:Bind Vm.IsBusy, Mode=OneWay}" Width="22" Height="22"/>
+      </StackPanel>
+      <InfoBar IsOpen="{x:Bind Vm.HasStatus, Mode=OneWay}" Severity="{x:Bind Vm.Severity, Mode=OneWay}" Title="{x:Bind Vm.StatusTitle, Mode=OneWay}" Message="{x:Bind Vm.StatusMessage, Mode=OneWay}" IsClosable="True">
+        <InfoBar.ActionButton>
+          <Button x:Uid="Dns_Relaunch" Visibility="{x:Bind Vm.NeedsAdmin, Mode=OneWay}" Click="Relaunch_Click"/>
+        </InfoBar.ActionButton>
+      </InfoBar>
+    </StackPanel>
+  </ScrollViewer>
+</Page>

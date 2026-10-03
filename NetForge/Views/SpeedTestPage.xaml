@@ -1,0 +1,25 @@
+<Page x:Class="NetForge.Views.SpeedTestPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ScrollViewer>
+    <StackPanel Padding="32,28" Spacing="14" MaxWidth="940" HorizontalAlignment="Left">
+      <TextBlock x:Uid="Speed_Title" Style="{StaticResource TitleTextBlockStyle}"/>
+      <TextBlock x:Uid="Speed_Hint" Style="{StaticResource Muted}"/>
+      <TextBlock Text="{x:Bind Vm.BackendName}" Style="{StaticResource Muted}"/>
+      <StackPanel Orientation="Horizontal" Spacing="10">
+        <Button x:Uid="Start" Style="{StaticResource AccentButtonStyle}" Click="Start_Click" IsEnabled="{x:Bind Vm.IsIdle, Mode=OneWay}"/>
+        <Button x:Uid="Stop" Click="Stop_Click" IsEnabled="{x:Bind Vm.IsRunning, Mode=OneWay}"/>
+        <ProgressRing IsActive="{x:Bind Vm.IsRunning, Mode=OneWay}" Width="22" Height="22"/>
+      </StackPanel>
+      <TextBlock Text="{x:Bind Vm.Stage, Mode=OneWay}" AutomationProperties.LiveSetting="Polite"/>
+      <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto" ColumnSpacing="16" RowSpacing="18" MaxWidth="640">
+        <StackPanel><TextBlock x:Uid="Speed_Down" Style="{StaticResource CaptionTextBlockStyle}"/><TextBlock Text="{x:Bind Vm.Download, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/></StackPanel>
+        <StackPanel Grid.Column="1"><TextBlock x:Uid="Speed_Up" Style="{StaticResource CaptionTextBlockStyle}"/><TextBlock Text="{x:Bind Vm.Upload, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/></StackPanel>
+        <StackPanel Grid.Column="2"><TextBlock x:Uid="Speed_Ping" Style="{StaticResource CaptionTextBlockStyle}"/><TextBlock Text="{x:Bind Vm.Ping, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/></StackPanel>
+        <StackPanel Grid.Row="1"><TextBlock x:Uid="Speed_Jitter" Style="{StaticResource CaptionTextBlockStyle}"/><TextBlock Text="{x:Bind Vm.Jitter, Mode=OneWay}"/></StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1"><TextBlock x:Uid="Ping_Loss" Style="{StaticResource CaptionTextBlockStyle}"/><TextBlock Text="{x:Bind Vm.Loss, Mode=OneWay}"/></StackPanel>
+      </Grid>
+      <TextBlock Text="{x:Bind Vm.Failure, Mode=OneWay}" Style="{StaticResource Muted}"/>
+    </StackPanel>
+  </ScrollViewer>
+</Page>

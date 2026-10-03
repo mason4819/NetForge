@@ -1,0 +1,69 @@
+<Window x:Class="NetForge.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Grid x:Name="Root" Background="{ThemeResource NfBackgroundBrush}">
+    <!-- Opaque solid base + a very faint accent wash. No acrylic, no mica, no blur. -->
+    <Rectangle x:Name="AccentWash" Height="300" VerticalAlignment="Top" IsHitTestVisible="False" Opacity="0.09">
+      <Rectangle.Fill>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+          <GradientStop Color="{ThemeResource SystemAccentColor}" Offset="0"/>
+          <GradientStop Color="{ThemeResource SystemAccentColor}" Offset="1" />
+        </LinearGradientBrush>
+      </Rectangle.Fill>
+      <Rectangle.OpacityMask>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+          <GradientStop Color="#FF000000" Offset="0"/>
+          <GradientStop Color="#00000000" Offset="1"/>
+        </LinearGradientBrush>
+      </Rectangle.OpacityMask>
+    </Rectangle>
+    <NavigationView x:Name="Nav" IsBackButtonVisible="Collapsed" IsSettingsVisible="True" PaneDisplayMode="Auto"
+                    OpenPaneLength="268" SelectionChanged="Nav_SelectionChanged" Background="Transparent">
+      <NavigationView.Resources>
+        <StaticResource x:Key="NavigationViewDefaultPaneBackground" ResourceKey="NfSurfaceBrush"/>
+        <StaticResource x:Key="NavigationViewExpandedPaneBackground" ResourceKey="NfSurfaceBrush"/>
+        <StaticResource x:Key="NavigationViewTopPaneBackground" ResourceKey="NfSurfaceBrush"/>
+      </NavigationView.Resources>
+      <NavigationView.MenuItems>
+        <NavigationViewItem x:Uid="Nav_overview" Tag="overview"><NavigationViewItem.Icon><FontIcon Glyph="&#xE80F;"/></NavigationViewItem.Icon></NavigationViewItem>
+        <NavigationViewItem x:Uid="Nav_common" SelectsOnInvoked="False" IsExpanded="True">
+          <NavigationViewItem.Icon><FontIcon Glyph="&#xE774;"/></NavigationViewItem.Icon>
+          <NavigationViewItem.MenuItems>
+            <NavigationViewItem x:Uid="Nav_dns" Tag="dns"/>
+            <NavigationViewItem x:Uid="Nav_ping" Tag="ping"/>
+            <NavigationViewItem x:Uid="Nav_traceroute" Tag="traceroute"/>
+            <NavigationViewItem x:Uid="Nav_networktest" Tag="networktest"/>
+            <NavigationViewItem x:Uid="Nav_speedtest" Tag="speedtest"/>
+            <NavigationViewItem x:Uid="Nav_wifi" Tag="wifi"/>
+            <NavigationViewItem x:Uid="Nav_ethernet" Tag="ethernet"/>
+            <NavigationViewItem x:Uid="Nav_adapters" Tag="adapters"/>
+          </NavigationViewItem.MenuItems>
+        </NavigationViewItem>
+        <NavigationViewItem x:Uid="Nav_advanced" SelectsOnInvoked="False" IsExpanded="False">
+          <NavigationViewItem.Icon><FontIcon Glyph="&#xE713;"/></NavigationViewItem.Icon>
+          <NavigationViewItem.MenuItems>
+            <NavigationViewItem x:Uid="Nav_ipv4" Tag="adv:ipv4"/>
+            <NavigationViewItem x:Uid="Nav_ipv6" Tag="adv:ipv6"/>
+            <NavigationViewItem x:Uid="Nav_tcpip" Tag="adv:tcpip"/>
+            <NavigationViewItem x:Uid="Nav_dhcp" Tag="adv:dhcp"/>
+            <NavigationViewItem x:Uid="Nav_routing" Tag="adv:routing"/>
+            <NavigationViewItem x:Uid="Nav_arp" Tag="adv:arp"/>
+            <NavigationViewItem x:Uid="Nav_mtu" Tag="adv:mtu"/>
+            <NavigationViewItem x:Uid="Nav_proxy" Tag="adv:proxy"/>
+            <NavigationViewItem x:Uid="Nav_hosts" Tag="adv:hosts"/>
+            <NavigationViewItem x:Uid="Nav_firewall" Tag="adv:firewall"/>
+            <NavigationViewItem x:Uid="Nav_winsock" Tag="adv:winsock"/>
+            <NavigationViewItem x:Uid="Nav_netbios" Tag="adv:netbios"/>
+            <NavigationViewItem x:Uid="Nav_qos" Tag="adv:qos"/>
+            <NavigationViewItem x:Uid="Nav_reset" Tag="adv:reset"/>
+          </NavigationViewItem.MenuItems>
+        </NavigationViewItem>
+        <NavigationViewItem x:Uid="Nav_diagnostics" Tag="diagnostics"><NavigationViewItem.Icon><FontIcon Glyph="&#xE9D9;"/></NavigationViewItem.Icon></NavigationViewItem>
+      </NavigationView.MenuItems>
+      <NavigationView.FooterMenuItems>
+        <NavigationViewItem x:Uid="Nav_about" Tag="about"><NavigationViewItem.Icon><FontIcon Glyph="&#xE946;"/></NavigationViewItem.Icon></NavigationViewItem>
+      </NavigationView.FooterMenuItems>
+      <Frame x:Name="ContentFrame"/>
+    </NavigationView>
+  </Grid>
+</Window>

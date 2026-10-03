@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_overview.Content" xml:space="preserve"><value>总览</value></data>
+  <data name="Nav_common.Content" xml:space="preserve"><value>常用</value></data>
+  <data name="Nav_dns.Content" xml:space="preserve"><value>DNS</value></data>
+  <data name="Nav_ping.Content" xml:space="preserve"><value>Ping</value></data>
+  <data name="Nav_traceroute.Content" xml:space="preserve"><value>路由跟踪</value></data>
+  <data name="Nav_networktest.Content" xml:space="preserve"><value>网络测试</value></data>
+  <data name="Nav_speedtest.Content" xml:space="preserve"><value>速度测试</value></data>
+  <data name="Nav_wifi.Content" xml:space="preserve"><value>Wi-Fi</value></data>
+  <data name="Nav_ethernet.Content" xml:space="preserve"><value>以太网</value></data>
+  <data name="Nav_adapters.Content" xml:space="preserve"><value>网卡</value></data>
+  <data name="Nav_advanced.Content" xml:space="preserve"><value>高级</value></data>
+  <data name="Nav_ipv4.Content" xml:space="preserve"><value>IPv4</value></data>
+  <data name="Nav_ipv6.Content" xml:space="preserve"><value>IPv6</value></data>
+  <data name="Nav_tcpip.Content" xml:space="preserve"><value>TCP/IP</value></data>
+  <data name="Nav_dhcp.Content" xml:space="preserve"><value>DHCP</value></data>
+  <data name="Nav_routing.Content" xml:space="preserve"><value>路由</value></data>
+  <data name="Nav_arp.Content" xml:space="preserve"><value>ARP</value></data>
+  <data name="Nav_mtu.Content" xml:space="preserve"><value>MTU</value></data>
+  <data name="Nav_proxy.Content" xml:space="preserve"><value>代理</value></data>
+  <data name="Nav_hosts.Content" xml:space="preserve"><value>Hosts</value></data>
+  <data name="Nav_firewall.Content" xml:space="preserve"><value>防火墙</value></data>
+  <data name="Nav_winsock.Content" xml:space="preserve"><value>Winsock</value></data>
+  <data name="Nav_netbios.Content" xml:space="preserve"><value>NetBIOS</value></data>
+  <data name="Nav_qos.Content" xml:space="preserve"><value>QoS</value></data>
+  <data name="Nav_reset.Content" xml:space="preserve"><value>网络重置</value></data>
+  <data name="Nav_diagnostics.Content" xml:space="preserve"><value>诊断</value></data>
+  <data name="Nav_about.Content" xml:space="preserve"><value>关于</value></data>
+  <data name="Refresh.Content" xml:space="preserve"><value>刷新</value></data>
+  <data name="Start.Content" xml:space="preserve"><value>开始</value></data>
+  <data name="Stop.Content" xml:space="preserve"><value>停止</value></data>
+  <data name="Empty_T.Text" xml:space="preserve"><value>目前没有数据</value></data>
+  <data name="Empty_S.Text" xml:space="preserve"><value>这个界面现在没有可以显示的内容。
+这里目前很安静。</value></data>
+  <data name="Overview_Title.Text" xml:space="preserve"><value>网络状态</value></data>
+  <data name="Overview_Run.Content" xml:space="preserve"><value>运行网络诊断</value></data>
+  <data name="Overview_Refresh.Content" xml:space="preserve"><value>刷新</value></data>
+  <data name="Overview_Quick.Text" xml:space="preserve"><value>快速操作</value></data>
+  <data name="Overview_NoSpeed" xml:space="preserve"><value>还没测过速度</value></data>
+  <data name="Msg_Connected_T" xml:space="preserve"><value>网络正常</value></data>
+  <data name="Msg_Connected_S" xml:space="preserve"><value>你的网络目前活得好好的。</value></data>
+  <data name="Msg_Limited_T" xml:space="preserve"><value>连接受限</value></data>
+  <data name="Msg_Limited_S" xml:space="preserve"><value>路由器连得上,但外面的网络没有回应。</value></data>
+  <data name="Msg_Disconnected_T" xml:space="preserve"><value>没有网络</value></data>
+  <data name="Msg_Disconnected_S" xml:space="preserve"><value>看起来网络跑掉了。我们先从最简单的地方开始检查。</value></data>
+  <data name="Msg_UacDenied" xml:space="preserve"><value>没有获得管理员批准,所以什么都没改。</value></data>
+  <data name="State_Passed" xml:space="preserve"><value>通过</value></data>
+  <data name="State_Warning" xml:space="preserve"><value>注意</value></data>
+  <data name="State_Failed" xml:space="preserve"><value>失败</value></data>
+  <data name="Status_Up" xml:space="preserve"><value>已连接</value></data>
+  <data name="Status_Down" xml:space="preserve"><value>未连接</value></data>
+  <data name="Dns_Hint.Text" xml:space="preserve"><value>不知道选哪个?没关系,这里不是考试。</value></data>
+  <data name="Dns_Help.Content" xml:space="preserve"><value>帮我选</value></data>
+  <data name="Dns_Category.Header" xml:space="preserve"><value>分类</value></data>
+  <data name="Dns_Scope.Header" xml:space="preserve"><value>应用到</value></data>
+  <data name="Dns_Family.Header" xml:space="preserve"><value>IP 类型</value></data>
+  <data name="Dns_Apply.Content" xml:space="preserve"><value>应用</value></data>
+  <data name="Dns_Backup.Content" xml:space="preserve"><value>备份当前 DNS</value></data>
+  <data name="Dns_Restore.Content" xml:space="preserve"><value>还原之前的 DNS</value></data>
+  <data name="Dns_Relaunch.Content" xml:space="preserve"><value>以管理员身份重新运行</value></data>
+  <data name="Ping_Target.Header" xml:space="preserve"><value>目标</value></data>
+  <data name="Test_Run.Content" xml:space="preserve"><value>开始测试</value></data>
+  <data name="Wifi_None_T.Text" xml:space="preserve"><value>未连接 Wi-Fi</value></data>
+  <data name="Settings_Theme.Header" xml:space="preserve"><value>主题</value></data>
+  <data name="Settings_Language.Header" xml:space="preserve"><value>语言</value></data>
+  <data name="Settings_Restart.Text" xml:space="preserve"><value>重新打开 NetForge 后语言才会生效。</value></data>
+  <data name="Settings_Perf.Header" xml:space="preserve"><value>性能</value></data>
+  <data name="Settings_Balanced.Content" xml:space="preserve"><value>平衡</value></data>
+  <data name="Settings_Low.Content" xml:space="preserve"><value>低资源</value></data>
+  <data name="About_Tagline.Text" xml:space="preserve"><value>懂网络,但不会跟你讲一堆废话。</value></data>
+</root>

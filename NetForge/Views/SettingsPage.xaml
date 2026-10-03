@@ -1,0 +1,19 @@
+<Page x:Class="NetForge.Views.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ScrollViewer>
+    <StackPanel Padding="32,28" Spacing="18" MaxWidth="640" HorizontalAlignment="Left">
+      <TextBlock x:Uid="Settings_Title" Style="{StaticResource TitleTextBlockStyle}"/>
+      <ComboBox x:Uid="Settings_Theme" Width="260" ItemsSource="{x:Bind Vm.ThemeOptions}" SelectedIndex="{x:Bind Vm.ThemeIndex, Mode=TwoWay}"/>
+      <StackPanel Spacing="6">
+        <ComboBox x:Uid="Settings_Language" Width="260" ItemsSource="{x:Bind Vm.LanguageOptions}" SelectedIndex="{x:Bind Vm.LanguageIndex, Mode=TwoWay}"/>
+        <TextBlock x:Uid="Settings_Restart" Style="{StaticResource Muted}" Visibility="{x:Bind Vm.RestartNote, Mode=OneWay}"/>
+      </StackPanel>
+      <RadioButtons x:Uid="Settings_Perf" SelectedIndex="{x:Bind Vm.PerformanceIndex, Mode=TwoWay}">
+        <RadioButton x:Uid="Settings_Balanced"/>
+        <RadioButton x:Uid="Settings_Low"/>
+      </RadioButtons>
+      <TextBlock x:Uid="Settings_LowHint" Style="{StaticResource Muted}"/>
+    </StackPanel>
+  </ScrollViewer>
+</Page>
