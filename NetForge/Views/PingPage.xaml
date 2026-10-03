@@ -15,7 +15,7 @@
       </StackPanel>
       <TextBlock Text="{x:Bind Vm.Note, Mode=OneWay}" Style="{StaticResource Muted}" AutomationProperties.LiveSetting="Polite"/>
       <TextBlock Text="{x:Bind Vm.Error, Mode=OneWay}" TextWrapping="Wrap" Foreground="{ThemeResource SystemFillColorCriticalBrush}"/>
-      <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto,Auto,Auto" ColumnSpacing="16" RowSpacing="10" MaxWidth="560">
+      <Grid ColumnSpacing="16" RowSpacing="10" MaxWidth="560"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
         <StackPanel><TextBlock x:Uid="Ping_Sent" Style="{StaticResource CaptionTextBlockStyle}"/><TextBlock Text="{x:Bind Vm.Sent, Mode=OneWay}"/></StackPanel>
         <StackPanel Grid.Column="1"><TextBlock x:Uid="Ping_Received" Style="{StaticResource CaptionTextBlockStyle}"/><TextBlock Text="{x:Bind Vm.Received, Mode=OneWay}"/></StackPanel>
         <StackPanel Grid.Column="2"><TextBlock x:Uid="Ping_Loss" Style="{StaticResource CaptionTextBlockStyle}"/><TextBlock Text="{x:Bind Vm.Loss, Mode=OneWay}"/></StackPanel>

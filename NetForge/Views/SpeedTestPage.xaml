@@ -12,7 +12,7 @@
         <ProgressRing IsActive="{x:Bind Vm.IsRunning, Mode=OneWay}" Width="22" Height="22"/>
       </StackPanel>
       <TextBlock Text="{x:Bind Vm.Stage, Mode=OneWay}" AutomationProperties.LiveSetting="Polite"/>
-      <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto" ColumnSpacing="16" RowSpacing="18" MaxWidth="640">
+      <Grid ColumnSpacing="16" RowSpacing="18" MaxWidth="640"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
         <StackPanel><TextBlock x:Uid="Speed_Down" Style="{StaticResource CaptionTextBlockStyle}"/><TextBlock Text="{x:Bind Vm.Download, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/></StackPanel>
         <StackPanel Grid.Column="1"><TextBlock x:Uid="Speed_Up" Style="{StaticResource CaptionTextBlockStyle}"/><TextBlock Text="{x:Bind Vm.Upload, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/></StackPanel>
         <StackPanel Grid.Column="2"><TextBlock x:Uid="Speed_Ping" Style="{StaticResource CaptionTextBlockStyle}"/><TextBlock Text="{x:Bind Vm.Ping, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/></StackPanel>

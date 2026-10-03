@@ -13,7 +13,7 @@
       <ItemsControl ItemsSource="{x:Bind Vm.Items}">
         <ItemsControl.ItemTemplate>
           <DataTemplate x:DataType="m:TestItem">
-            <Grid ColumnDefinitions="140,*,150" ColumnSpacing="12" Padding="0,6" BorderBrush="{ThemeResource NfStrokeBrush}" BorderThickness="0,0,0,1">
+            <Grid ColumnSpacing="12" Padding="0,6" BorderBrush="{ThemeResource NfStrokeBrush}" BorderThickness="0,0,0,1"><Grid.ColumnDefinitions><ColumnDefinition Width="140"/><ColumnDefinition Width="*"/><ColumnDefinition Width="150"/></Grid.ColumnDefinitions>
               <TextBlock Text="{x:Bind Name}" Style="{StaticResource BodyStrongTextBlockStyle}"/>
               <TextBlock Grid.Column="1" Text="{x:Bind Detail, Mode=OneWay}" TextWrapping="Wrap" Style="{StaticResource Muted}"/>
               <TextBlock Grid.Column="2" Text="{x:Bind StateText, Mode=OneWay}" HorizontalAlignment="Right"/>

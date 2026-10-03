@@ -23,7 +23,7 @@
         </ListView.ItemTemplate>
       </ListView>
       <TextBlock Text="{x:Bind Vm.Details, Mode=OneWay}" Style="{StaticResource Muted}" IsTextSelectionEnabled="True"/>
-      <Grid Visibility="{x:Bind Vm.IsCustom, Mode=OneWay}" ColumnDefinitions="*,*" ColumnSpacing="12" RowDefinitions="Auto,Auto" RowSpacing="10">
+      <Grid Visibility="{x:Bind Vm.IsCustom, Mode=OneWay}" ColumnSpacing="12" RowSpacing="10"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
         <TextBox x:Uid="Dns_P4" Text="{x:Bind Vm.CustomP4, Mode=TwoWay}"/>
         <TextBox x:Uid="Dns_S4" Grid.Column="1" Text="{x:Bind Vm.CustomS4, Mode=TwoWay}"/>
         <TextBox x:Uid="Dns_P6" Grid.Row="1" Text="{x:Bind Vm.CustomP6, Mode=TwoWay}"/>

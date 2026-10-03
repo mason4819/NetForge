@@ -8,11 +8,17 @@
       </ResourceDictionary.MergedDictionaries>
       <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Light">
+          <SolidColorBrush x:Key="NavigationViewDefaultPaneBackground" Color="#F1F1F3"/>
+          <SolidColorBrush x:Key="NavigationViewExpandedPaneBackground" Color="#F1F1F3"/>
+          <SolidColorBrush x:Key="NavigationViewTopPaneBackground" Color="#F1F1F3"/>
           <SolidColorBrush x:Key="NfBackgroundBrush" Color="#FAFAFA"/>
           <SolidColorBrush x:Key="NfSurfaceBrush" Color="#F1F1F3"/>
           <SolidColorBrush x:Key="NfStrokeBrush" Color="#E0E0E4"/>
         </ResourceDictionary>
         <ResourceDictionary x:Key="Dark">
+          <SolidColorBrush x:Key="NavigationViewDefaultPaneBackground" Color="#242427"/>
+          <SolidColorBrush x:Key="NavigationViewExpandedPaneBackground" Color="#242427"/>
+          <SolidColorBrush x:Key="NavigationViewTopPaneBackground" Color="#242427"/>
           <SolidColorBrush x:Key="NfBackgroundBrush" Color="#1B1B1D"/>
           <SolidColorBrush x:Key="NfSurfaceBrush" Color="#242427"/>
           <SolidColorBrush x:Key="NfStrokeBrush" Color="#38383C"/>

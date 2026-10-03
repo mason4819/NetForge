@@ -7,23 +7,12 @@
       <Rectangle.Fill>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
           <GradientStop Color="{ThemeResource SystemAccentColor}" Offset="0"/>
-          <GradientStop Color="{ThemeResource SystemAccentColor}" Offset="1" />
+          <GradientStop Color="Transparent" Offset="1" />
         </LinearGradientBrush>
       </Rectangle.Fill>
-      <Rectangle.OpacityMask>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-          <GradientStop Color="#FF000000" Offset="0"/>
-          <GradientStop Color="#00000000" Offset="1"/>
-        </LinearGradientBrush>
-      </Rectangle.OpacityMask>
     </Rectangle>
     <NavigationView x:Name="Nav" IsBackButtonVisible="Collapsed" IsSettingsVisible="True" PaneDisplayMode="Auto"
                     OpenPaneLength="268" SelectionChanged="Nav_SelectionChanged" Background="Transparent">
-      <NavigationView.Resources>
-        <StaticResource x:Key="NavigationViewDefaultPaneBackground" ResourceKey="NfSurfaceBrush"/>
-        <StaticResource x:Key="NavigationViewExpandedPaneBackground" ResourceKey="NfSurfaceBrush"/>
-        <StaticResource x:Key="NavigationViewTopPaneBackground" ResourceKey="NfSurfaceBrush"/>
-      </NavigationView.Resources>
       <NavigationView.MenuItems>
         <NavigationViewItem x:Uid="Nav_overview" Tag="overview"><NavigationViewItem.Icon><FontIcon Glyph="&#xE80F;"/></NavigationViewItem.Icon></NavigationViewItem>
         <NavigationViewItem x:Uid="Nav_common" SelectsOnInvoked="False" IsExpanded="True">
